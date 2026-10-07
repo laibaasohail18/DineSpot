@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* css-languageservice-disable unknownAtRules */
+:root {
+  --color-surface: #0c0d0e;
+  --color-surface-container-lowest: #050505;
+  --color-surface-container-low: #151719;
+  --color-on-surface: #f5f5f4;
+  --color-outline-variant: #292524;
+  --color-primary: #c5a880;
+  --color-on-primary: #0c0d0e;
+  --color-primary-container: #1c1917;
+  --color-on-primary-container: #e7e5e4;
+  --color-secondary: #c5a880;
+  --color-on-secondary: #0c0d0e;
+  --color-secondary-container: #272018;
+  --color-on-secondary-container: #c5a880;
+  --color-error: #f43f5e;
+  --color-on-error: #ffffff;
+  --color-error-container: #4c0519;
+  --color-on-error-container: #fecdd3;
+
+  /* Typography Fonts */
+  --font-display: "Playfair Display", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-body: "Outfit", sans-serif;
+}
+/* css-languageservice-enable unknownAtRules */
+
+body {
+  font-family: var(--font-body);
+  background-color: #0c0d0e;
+  color: #f5f5f4;
+  overflow-x: hidden;
+  -webkit-background-composite: #c5a880;
+  lighting-color: #0c0d0e;
+}
+
+/* === DINESPOT ULTRA-LUXURY DESIGN SYSTEM UTILITIES === */
+
+/* Premium Glassmorphism Cards */
+.glass-panel {
+  background: rgba(21, 23, 25, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(21, 23, 25, 0.9);
+  border-color: rgba(197, 168, 128, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px 0 rgba(197, 168, 128, 0.1);
+}
+
+/* Glowing Gold Accents & Text Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #c5a880 50%, #8e734c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  position: relative;
+}
+
+.gold-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.4), transparent, rgba(197, 168, 128, 0.2));
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ambient Midnight Background Lights */
+.ambient-bg-glow {
+  background: radial-gradient(circle at 50% -20%, rgba(197, 168, 128, 0.12), transparent 70%);
+}
+
+/* Smooth Dynamic Transitions */
+.transition-luxury {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0d0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292524;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+/* Custom Endless Golden Glow Hover Utility */
+.btn-endless-gold {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #c5a880 0%, #a88a62 100%);
+  color: #0c0d0e;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.15);
+}
+
+.btn-endless-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transition: all 0.6s ease;
+}
+
+.btn-endless-gold:hover::before {
+  left: 100%;
+}
+
+.btn-endless-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(197, 168, 128, 0.4), 0 0 15px rgba(197, 168, 128, 0.2);
+}
+
+.btn-endless-gold:active {
+  transform: translateY(0) scale(0.98);
+}

@@ -1,0 +1,14 @@
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { AppContextProvider } from "./context/AppContext.tsx";
+import { BrowserRouter } from "react-router-dom";
+
+// DineSpot Midnight Dark VIP Entry Mount Point
+createRoot(document.getElementById("root")!).render(
+    <BrowserRouter>
+        <AppContextProvider>
+            <App />
+        </AppContextProvider>
+    </BrowserRouter>
+);
