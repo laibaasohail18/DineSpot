@@ -7,7 +7,7 @@ import Loader from "./Loader.tsx";
 
 interface ProtectedRouteProps {
     children: React.ReactNode;
-    allowedRoles?: ("user" | "admin" | "owner")[];
+    allowedRoles?: ("user" | "customer"| "admin" | "owner")[];
 }
 
 export default function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) {
